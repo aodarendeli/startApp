@@ -8,28 +8,13 @@ import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import { store } from './store/configureStore.ts';
 import { router } from './router/Routes.tsx';
-
-const forceSlashAfterHash = () => {
-  const _hash = window.location.hash;
-
-  console.log("deneme",_hash);
-
-  
-  
-  if (_hash[1] && _hash[1] != '/') {
-
-      window.location.href = window.location.origin + window.location.pathname + window.location.search + "#/" + _hash.slice(1);
-
-  }
-
-}
-
-forceSlashAfterHash();
-
-window.addEventListener('hashchange', forceSlashAfterHash);
+import './main.scss'
+import { ThemeContextProvider } from './theme/ThemeContextProvider.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
-    <RouterProvider  router={router} />
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
   </Provider>
 )

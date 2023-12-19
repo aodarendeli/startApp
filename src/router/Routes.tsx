@@ -6,6 +6,7 @@ import NotFound from "../pages/NotFound/NotFound";
 import ServerError from "../pages/ServerError/ServerError";
 import About from "../pages/about/About";
 import Catalog from "../pages/Catalog/Catalog";
+import Blog from "../pages/Blog/Blog";
 
 
 const routes = [
@@ -17,6 +18,7 @@ const routes = [
             { path: 'contact', element: <Contact /> },
             { path: 'about', element: <About /> },
             { path: 'catalog', element: <Catalog /> },
+            { path: 'blog', element: <Blog /> },
             { path: 'not-found', element: <NotFound /> },
             { path: 'server-error', element: <ServerError /> },
             { path: '*', element: <Navigate replace to='/not-found' /> },

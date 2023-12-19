@@ -14,13 +14,16 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import React from 'react';
-import { Switch } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { useThemeContext } from '../../theme/ThemeContextProvider';
 
 const pages = [
   { title: 'catalog', path: '/catalog' },
   { title: 'about', path: '/about' },
   { title: 'contact', path: '/contact' },
+  { title: 'blog', path: '/blog' },
 ]
 
 // const rightLinks = [
@@ -28,14 +31,9 @@ const pages = [
 //   { title: 'register', path: '/register' },
 // ]
 
-
 // const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-interface Props {
-  darkMode: boolean;
-  handleThemeChange: () => void;
-}
-function Header({ darkMode, handleThemeChange }: Props) {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -54,8 +52,13 @@ function Header({ darkMode, handleThemeChange }: Props) {
     setAnchorElUser(null);
   };
 
+  const { mode, toggleColorMode } = useThemeContext();
+
+  console.log(mode)
+
+
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -106,8 +109,8 @@ function Header({ darkMode, handleThemeChange }: Props) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({title,path}) => (
-                <MenuItem key={path} onClick={handleCloseNavMenu}  component={NavLink}  to={`${path}`}>
+              {pages.map(({ title, path }) => (
+                <MenuItem key={path} onClick={handleCloseNavMenu} component={NavLink} to={`${path}`}>
                   <Typography textAlign="center">{title}</Typography>
                 </MenuItem>
               ))}
@@ -133,12 +136,12 @@ function Header({ darkMode, handleThemeChange }: Props) {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({title,path}) => (
+            {pages.map(({ title, path }) => (
               <Button
                 key={path}
                 onClick={handleCloseNavMenu}
-                component={NavLink} 
-                 to={`${path}`}
+                component={NavLink}
+                to={`${path}`}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {title}
@@ -153,7 +156,10 @@ function Header({ darkMode, handleThemeChange }: Props) {
               </IconButton>
             </Tooltip>
             <div>
-              <Switch checked={darkMode} onChange={handleThemeChange} />
+              {/* <Switch checked={darkMode} onChange={handleThemeChange} /> */}
+              <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+                {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+              </IconButton>
             </div>
             <Menu
               sx={{ mt: '45px' }}

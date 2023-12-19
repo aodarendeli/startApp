@@ -1,33 +1,30 @@
-import {useState } from "react"
+import { Container, CssBaseline, ThemeProvider} from "@mui/material";
 import Header from "./components/Header/Header";
-import { Container, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { Outlet} from "react-router-dom";
+
+import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./components/Footer/Footer";
+import './main.scss';
+import { useThemeContext } from "./theme/ThemeContextProvider";
 // import HomePage from "./pages/HomePage/HomePage";
 interface IRootRoute {
   outlet?: any;
 }
 function App(props: IRootRoute) {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-  const paletteType = darkMode ? 'dark' : 'light';
-  const theme = createTheme({
-    palette: {
-      mode: paletteType
-    }
-  })
-  const handleThemeChange = () => {
-    setDarkMode(!darkMode);
-  }
- 
+  const { theme } = useThemeContext();
+
   return (
     <ThemeProvider theme={theme}>
       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
       <CssBaseline />
-      <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container>
-        {props.outlet ? props.outlet : <Outlet />}
+      <Header />
+      <Container maxWidth="lg">
+        <main className="main">
+          {props.outlet ? props.outlet : <Outlet />}
+        </main>
       </Container>
+      <Footer />
     </ThemeProvider>
   )
 }
