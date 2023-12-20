@@ -20,10 +20,10 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useThemeContext } from '../../theme/ThemeContextProvider';
 
 const pages = [
-  { title: 'catalog', path: '/catalog' },
-  { title: 'about', path: '/about' },
-  { title: 'contact', path: '/contact' },
-  { title: 'blog', path: '/blog' },
+  // { title: 'catalog', path: '/catalog' },
+  { title: 'Hakkımızda', path: '/hakkımızda' },
+  { title: 'İletişim', path: '/iletisim' },
+  { title: 'Blog', path: '/blog' },
 ]
 
 // const rightLinks = [
@@ -72,12 +72,12 @@ function Header() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              // letterSpacing: '.3rem',
+              color: 'white',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            YeditepeTeknik
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

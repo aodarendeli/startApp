@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import { Box, Button, Typography, Card } from "@mui/material";
+import { NavLink } from "react-router-dom";
 function CenteredBlogCard({ image, title, description, action }: any) {
     return (
         <Card>
@@ -47,8 +48,8 @@ function CenteredBlogCard({ image, title, description, action }: any) {
                 {action.type === "external" ? (
                     <Button
                         // component={MuiLink}
-                        href={action.route}
-                        target="_blank"
+                        component={NavLink}
+                        to={action.route}
                         rel="noreferrer"
                         // variant="gradient"
                         size="small"
@@ -61,6 +62,8 @@ function CenteredBlogCard({ image, title, description, action }: any) {
                         // component={Link}
                         // to={action.route}
                         // variant="gradient"
+                        component={NavLink}
+                        to={action.route}
                         size="small"
                         color={action.color ? action.color : "dark"}
                     >

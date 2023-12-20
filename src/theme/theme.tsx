@@ -1,5 +1,5 @@
 import { PaletteMode, colors } from "@mui/material";
-import { amber, deepOrange, grey, blue } from "@mui/material/colors";
+import { amber, grey } from "@mui/material/colors";
 
 const theme = {
   palette: {
@@ -95,7 +95,7 @@ export const getThemedComponents = (mode: PaletteMode) => ({
         //     },
         //   },
         // },
-       MuiCardHeader: {
+        MuiCardHeader: {
           styleOverrides: {
             root: {
               backgroundColor: amber,

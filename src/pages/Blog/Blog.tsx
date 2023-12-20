@@ -1,8 +1,11 @@
-import React from 'react'
+import { Container } from "@mui/material"
+import Posts from "../../components/Posts/Posts"
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <Container maxWidth="xl">
+      <Posts />
+    </Container>
   )
 }
 

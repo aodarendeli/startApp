@@ -35,7 +35,7 @@ function BackgroundBlogCard({ image, title, description, action }: any) {
             <Box p={3} >
                 <Box minHeight="20.625rem" my="auto" py={3}>
                     <Typography
-                        variant="h2"
+                        variant="h4"
                         color="white"
                         mb={1}
                     >

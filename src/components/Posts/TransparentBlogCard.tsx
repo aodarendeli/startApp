@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -10,6 +10,7 @@ import MuiLink from "@mui/material/Link";
 import { Box, Typography } from "@mui/material";
 
 function TransparentBlogCard({ image, title, description, action }:any) {
+  console.log(action)
   const cardActionStyles = {
     display: "flex",
     alignItems: "center",
@@ -90,8 +91,8 @@ function TransparentBlogCard({ image, title, description, action }:any) {
         </Typography>
         {action.type === "internal" ? (
           <Typography
-            // component={Link}
-            // to={action.route}
+            component={NavLink}
+            to={action.route}
             variant="body2"
             fontWeight="regular"
             color={action.color}
@@ -103,9 +104,8 @@ function TransparentBlogCard({ image, title, description, action }:any) {
           </Typography>
         ) : (
           <Typography
-            // component={MuiLink}
-            // href={action.route}
-            // target="_blank"
+            component={NavLink}
+            to={action.route}
             rel="noreferrer"
             variant="body2"
             fontWeight="regular"

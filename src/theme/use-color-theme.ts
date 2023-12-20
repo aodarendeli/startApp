@@ -13,7 +13,7 @@ export const useColorTheme = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   React.useEffect(() => {
-    setMode(prefersDarkMode ? 'dark' : 'light');
+    setMode(prefersDarkMode ? 'light' : 'dark');
   }, [prefersDarkMode]);
 
 

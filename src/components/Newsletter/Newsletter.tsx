@@ -8,18 +8,17 @@ function Newsletter() {
             <Container>
                 <Grid container alignItems="center">
                     <Grid item xs={12} lg={8} md={6}>
-                        <Typography variant="h4">Be the first to see the news</Typography>
+                        <Typography variant="h4">Güncel Haberlerden bilgi almak için</Typography>
                         <Typography variant="body2" color="text" mb={3}>
-                            Your company may not be in the software business, but eventually, a software company
-                            will be in your business.
+                            Mail adresinizi bıraktığınız takdirde sizlere detaylı bir bilgi vererek gün içerinde en etkili yardımı sağlamaya hazırız.
                         </Typography>
                         <Grid container spacing={1}>
                             <Grid item xs={8}>
-                                <Input type="email"  placeholder={"Email Here..."} fullWidth />
+                                <Input type="email"  placeholder={"Email ..."} fullWidth />
                             </Grid>
                             <Grid item xs={4}>
                                 <Button sx={{ height: "100%" }}>
-                                    Subscribe
+                                    Gönder
                                 </Button>
                             </Grid>
                         </Grid>

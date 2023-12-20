@@ -66,7 +66,7 @@ function ContactComp() {
                                                 ml={2}
                                                 fontWeight="regular"
                                             >
-                                                hello@creative-tim.com
+                                                ozgur
                                             </Typography>
                                         </Box>
                                         <Box display="flex" color="white" p={1}>

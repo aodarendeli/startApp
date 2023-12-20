@@ -16,7 +16,7 @@ import DefaultCounterCard from "./DefaultCounterCard";
 function Featuring() {
     return (
         <Box component="section" pt={3} pb={8}>
-            <Container>
+            <Container maxWidth="xl">
                 <Grid container spacing={3} sx={{ mb: 12 }}>
                     <Grid item xs={6} md={4} lg={2}>
                         <Box component="img" src={coinbase} alt="coinbase" width="100%" />
@@ -44,8 +44,8 @@ function Featuring() {
                             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-expect-error
                             separator=","
-                            title="Projects"
-                            description="Of “high-performing” level are led by a certified project manager"
+                            title="Projelerimiz"
+                            description="Eşsiz projemiz ve tamir çözümlerimiz ile hizmetinizdeyiz."
                         />
                     </Grid>
                     <Grid item xs={12} md={3}>
@@ -55,8 +55,8 @@ function Featuring() {
                             // @ts-expect-error
                             separator=","
                             suffix="+"
-                            title="Hours"
-                            description="That meets quality standards required by our users"
+                            title="Saat"
+                            description="Bunca yıla aşkın eşssiz bir tecrübe ile hizmetinizdeyiz."
                         />
                     </Grid>
                     <Grid item xs={12} md={3}>
@@ -65,8 +65,8 @@ function Featuring() {
                             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-expect-error
                             suffix="/7"
-                            title="Support"
-                            description="Actively engage team members that finishes on time"
+                            title="Destek"
+                            description="Günün her saati sizler için sorun çözüm bulmaya hazırız."
                         />
                     </Grid>
                 </Grid>

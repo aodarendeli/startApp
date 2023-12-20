@@ -25,11 +25,13 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <Typography variant="h3" >
-              The Executive Team
+              Dinamik Kadromuz İle
             </Typography>
             <Typography variant="body2" >
-              Typography&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+             Birbirinden kaliteli kadromuz ile yıllardır engin ve bilgin tecrübeler ile hizmet vermekteyiz.
+{/*              
+             &apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
+              at. That&apos;s my skill. */}
             </Typography>
           </Grid>
         </Grid>
@@ -38,9 +40,9 @@ function Team() {
             <Box mb={1}>
               <HorizontalTeamCard
                 image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Ahmet Özgür Darendeli"
+                position={{ color: "info", label: "Tesisat Ustası" }}
+                description="Tesisat tamiri kombi bakımı musluk tamiri konularında bilgilidir."
               />
             </Box>
           </Grid>
@@ -48,9 +50,9 @@ function Team() {
             <Box mb={1}>
               <HorizontalTeamCard
                 image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Ahmet Özgür Darendeli"
+                position={{ color: "info", label: "Tesisat Ustası" }}
+                description="Tesisat tamiri kombi bakımı musluk tamiri konularında bilgilidir."
               />
             </Box>
           </Grid>
@@ -58,9 +60,9 @@ function Team() {
             <Box mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Ahmet Özgür Darendeli"
+                position={{ color: "info", label: "Tesisat Ustası" }}
+                description="Tesisat tamiri kombi bakımı musluk tamiri konularında bilgilidir."
               />
             </Box>
           </Grid>
@@ -68,9 +70,9 @@ function Team() {
             <Box mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Ahmet Özgür Darendeli"
+                position={{ color: "info", label: "Tesisat Ustası" }}
+                description="Tesisat tamiri kombi bakımı musluk tamiri konularında bilgilidir."
               />
             </Box>
           </Grid>

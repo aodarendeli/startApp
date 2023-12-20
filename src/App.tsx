@@ -19,7 +19,7 @@ function App(props: IRootRoute) {
       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
       <CssBaseline />
       <Header />
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <main className="main">
           {props.outlet ? props.outlet : <Outlet />}
         </main>
